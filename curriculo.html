@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Filipe Alexandre</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/projetos.html">Projetos</a></li>
+            <li><a href="/curriculo.html" class="active">Currículo</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
+        <section id="curriculo" class="curriculo-section">
+            <h2>Experiência Profissional</h2>
+
+            <div class="grid-curriculos">
+                <div class="curriculo-card">
+                    <h3>Certo Saúde</h3>
+                    <p><strong>Cargo:</strong> Assistente Financeiro</p>
+                    <p><strong>Período:</strong> 01/2025 – 04/2025</p>
+                    <p><strong>Atividades:</strong> Conferência de caixa, contas a pagar/receber, conciliação bancária, estoque, emissão de NFs, relacionamento com fornecedores e suporte administrativo.</p>
+                </div>
+    
+                <div class="curriculo-card">
+                    <h3>Infinity School – Visual Art Creative Center</h3>
+                    <p><strong>Cargo:</strong> Supervisor Administrativo Acadêmico</p>
+                    <p><strong>Período:</strong> 05/2024 – 11/2024</p>
+                    <p><strong>Atividades:</strong> Criação/correção de materiais, supervisão de estagiários, elaboração de cronogramas, atendimento aos alunos e interface administrativa-acadêmica.</p>
+                </div>
+    
+                <div class="curriculo-card">
+                    <h3>Stark Comércio de Produtos de Medicamentos LTDA</h3>
+                    <p><strong>Cargo:</strong> Assistente de Licitações</p>
+                    <p><strong>Período:</strong> 06/2022 – 09/2023</p>
+                    <p><strong>Atividades:</strong> Elaboração e auditoria de propostas, precificação, análise de editais, análise competitiva, planilhas e dashboards em Power BI.</p>
+                </div>
+    
+                <div class="curriculo-card">
+                    <h3>SESI - Serviço Social da Indústria</h3>
+                    <p><strong>Cargo:</strong> Estagiário de Administração</p>
+                    <p><strong>Período:</strong> 11/2019 – 11/2021</p>
+                    <p><strong>Atividades:</strong> Relatórios financeiros, orçamentos, análise de pagamentos, monitoramento de indicadores, gestão de dados, relatórios gerenciais e envio de malotes.</p>
+                </div>
+    
+                <div class="curriculo-card">
+                    <h3>IFF - Instituto Fernando Filgueira</h3>
+                    <p><strong>Cargo:</strong> Auxiliar Administrativo</p>
+                    <p><strong>Período:</strong> 02/2018 – 11/2019</p>
+                    <p><strong>Atividades:</strong> Contas a pagar/receber, fluxo de caixa, orçamentos, relatórios gerenciais, comunicação interna e controle documental.</p>
+                </div>
+    
+                <div class="curriculo-card">
+                    <h3>IBDAH - Instituto Brasileiro de Desenvolvimento da Administração Hospitalar</h3>
+                    <p><strong>Cargo:</strong> Auxiliar Administrativo</p>
+                    <p><strong>Período:</strong> 08/2014 – 08/2016</p>
+                    <p><strong>Atividades:</strong> Recebimento de pagamentos, emissão de guias de faturamento, conferência de documentos, relatórios financeiros e aplicação de protocolos para evitar glosas.</p>
+                </div>
+        </section>
+
+
+        <!-- FORMAÇÃO ACADÊMICA -->
+        <section id="formacao" class="formacao-section">
+            <h2>Formação Acadêmica</h2>
+
+            <div class="grid-curriculos">
+                <div class="curriculo-card" onclick="openModal('pdf', 'img/certificados/Faculdade-ADM-EAD.pdf')">
+                    <h3>Universidade Salvador - UNIFACS</h3>
+                    <p><strong>Curso:</strong> Administração</p>
+                    <p><strong>Status:</strong> 7º semestre (trancado)</p>
+
+                    <span>Clique aqui</span>
+                </div>
+    
+                <div class="curriculo-card" onclick="openModal('pdf', 'img/certificados/Programação-Full-Stack.pdf')">
+                    <h3>Infinity School</h3>
+                    <p><strong>Curso Técnico:</strong> Programação Full Stack</p>
+                    <p><strong>Status:</strong> Concluido</p>
+
+                    <span>Clique aqui</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CURSOS E APRIMORAMENTOS -->
+        <section id="cursos" class="cursos-section">
+            <h2>Cursos e Aprimoramentos</h2>
+
+            <div class="grid-cursos">
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/Visão-do-Cliente.pdf')">Visão do Cliente – SESI (2021)</div>
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/Excel-Dashboard-Graficos-Avançados.pdf')">Excel Avançado – SESI (2022)</div>
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/Programação-Full-Stack.pdf')">Python – Infinity School (2023)</div>
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/Programação-Full-Stack.pdf')">SQL – Infinity School (2023)</div>
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/Flask-Python.pdf')">Flask – Infinity School (2023)</div>
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/Programação-Full-Stack.pdf')">HTML & CSS – Infinity School (2023)</div>
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/Programação-Full-Stack.pdf')">JavaScript – Infinity School (2024)</div>
+                <div class="curso-card" onclick="openModal('image', 'coloque a imagem aqui')">Canva – Infinity School (2024)</div>
+                <div class="curso-card" onclick="openModal('pdf', 'img/certificados/PowerBI+Excel-Avançado.pdf')">Power BI – Udemy (2025)</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

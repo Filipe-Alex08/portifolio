@@ -1,0 +1,411 @@
+/* ---------- Reset ---------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Paleta de Cores ---------- */
+:root {
+    --cor-principal: #4A90E2;
+    --cor-secundaria: #E6E6E6;
+    --cor-terciaria: #FFC107;
+    --cor-fundo: #121212;
+    --cor-texto: #D1D1D1;
+}
+
+/* ---------- Body Geral ---------- */
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    padding: 10px 0;
+    background: linear-gradient(180deg, #333, #1a1a1a);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 0 12px 12px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px;
+    display: block;
+    position: relative;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    color: var(--cor-principal);
+    background-color: rgba(74, 144, 226, 0.1);
+    transform: translateX(5px);
+}
+
+/* ---------- Conteúdo Principal ---------- */
+main {
+    margin-left: 220px;
+    padding: 40px;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+/* ---------- Títulos ---------- */
+h1, h2, h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ---------- Botões ---------- */
+button, .btn {
+    background-color: var(--cor-principal);
+    border: none;
+    padding: 12px 24px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background-color: #357ABD;
+}
+
+/* ---------- Formulários ---------- */
+form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #1f1f1f;
+    color: #fff;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+}
+
+/* ---------- Cards (Projetos / Currículo) ---------- */
+.projeto-card, .curriculo-card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    cursor: pointer;
+}
+
+.projeto-card:hover, .curriculo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.6);
+}
+
+/* ---------- Grid Layout ---------- */
+.grid-projetos, .grid-curriculos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.formacao-section {
+    margin-top: 60px;
+}
+
+.formacao-section .grid-curriculos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* ---------- Cursos e Aprimoramentos ---------- */
+.grid-cursos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.curso-card {
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.5);
+}
+
+/* ---------- HOME SECTION ---------- */
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    text-align: left;
+    padding: 80px;
+    gap: 40px;
+}
+
+.text-content {
+    max-width: 700px;
+    margin: auto 0;
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.text-content ul li {
+    margin-bottom: 12px;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.text-content ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+/* ---------- Imagem canto direito ---------- */
+.image-top-right {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-top-right .profile-image {
+    max-width: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-principal);
+}
+
+/* ---------- Contato Section ---------- */
+.contato-section {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Centralizar formulário */
+.form-contato {
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+/* Redes sociais */
+.social-media {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-media a:hover {
+    background-color: var(--cor-principal);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ---------- Imagens Gerais ---------- */
+.main-image {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 1024px) {
+    .grid-cursos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Sidebar vira menu superior */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        border-radius: 0;
+        z-index: 1000;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar ul li {
+        margin: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 80px;
+    }
+
+    /* Home em coluna */
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .text-content ul {
+        text-align: left;
+    }
+
+    .image-top-right {
+        margin-top: 30px;
+    }
+
+    .image-top-right .profile-image {
+        max-width: 180px;
+    }
+
+    .grid-cursos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---------- Modal ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1f1f1f;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: var(--cor-principal);
+}
+
+#modal-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-body iframe,
+#modal-body img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    object-fit: contain;
+}
