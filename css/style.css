@@ -27,13 +27,15 @@ body {
 .sidebar {
     position: fixed;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;
-    padding: 10px 0;
+    top: 0;
+    height: 100vh;
+    width: 220px;
     background: linear-gradient(180deg, #333, #1a1a1a);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 0 12px 12px 0;
+    padding-top: 80px;
+    transition: transform 0.4s ease;
+    z-index: 999;
 }
 
 .sidebar ul {
@@ -49,10 +51,9 @@ body {
     color: var(--cor-secundaria);
     text-decoration: none;
     font-size: 18px;
-    padding: 20px;
+    padding: 15px;
     display: block;
-    position: relative;
-    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    transition: 0.3s;
 }
 
 .sidebar ul li a:hover,
@@ -60,6 +61,20 @@ body {
     color: var(--cor-principal);
     background-color: rgba(74, 144, 226, 0.1);
     transform: translateX(5px);
+}
+
+/* ---------- Botão Hamburguer ---------- */
+.menu-toggle {
+    display: none; /* escondido no desktop */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: var(--cor-principal);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 /* ---------- Conteúdo Principal ---------- */
@@ -278,12 +293,6 @@ input:focus, textarea:focus {
     height: 24px;
 }
 
-/* ---------- Imagens Gerais ---------- */
-.main-image {
-    max-width: 100%;
-    border-radius: 20px;
-}
-
 /* ---------- Responsividade ---------- */
 @media (max-width: 1024px) {
     .grid-cursos {
@@ -292,32 +301,26 @@ input:focus, textarea:focus {
 }
 
 @media (max-width: 768px) {
-    /* Sidebar vira menu superior */
+    /* Mostra botão e esconde sidebar */
+    .menu-toggle {
+        display: block;
+    }
+
     .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        transform: none;
-        display: flex;
-        justify-content: center;
+        transform: translateX(-100%);
+        width: 200px;
+        padding-top: 80px;
         border-radius: 0;
-        z-index: 1000;
     }
 
-    .sidebar ul {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .sidebar ul li {
-        margin: 10px;
+    .sidebar.active {
+        transform: translateX(0);
     }
 
     main {
         margin-left: 0;
         margin-top: 80px;
+        padding: 20px;
     }
 
     /* Home em coluna */
